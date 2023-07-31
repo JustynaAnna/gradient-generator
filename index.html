@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>CSS Gradient Generator</title>
+</head>
+
+<body>
+  
+<div class="container">
+  <h1>Background: linear-gradient(<span class="hexDirection">to left </span>, #<span class="hex1">000000</span>, #
+    <span class="hex2">000000</span>, #<span class="hex3"> 000000</span>);
+  </h1>
+  <div>
+    <button id="generateTwoColors">Generate 2 colors</button>
+    <button id="generateThreeColors">Generate 3 colors</button>
+    <button id="copy">Copy</button>
+  </div>
+
+  <div class="direction">
+    <p>Direction</p>
+    <div class="select-box">
+      <select id="gradientDirection">
+        <option value="to top">Top</option>
+        <option value="to right top">Right top</option>
+        <option value="to right">Right</option>
+        <option value="to right bottom">Right bottom</option>
+        <option value="to bottom">Bottom</option>
+        <option value="to left bottom">Left bottom</option>
+        <option value="to left">Left</option>
+        <option value="to left top" selected>Left top</option>
+      </select>
+    </div>
+    <button class="refresh">Refresh</button>
+  </div>
+
+<div class="wrapper">
+  <div class="colors-palette left">
+      <div class="gradient-box"></div>
+      <p class="box">Choose colors</p>
+      <div class="colors-input">
+          <input type="color" value="#0003f5">
+          <input type="color" value="#ffe725">
+      </div>
+  </div>
+
+ <div class="right">
+      <textarea class="gradient-textarea"
+          disabled>background-image: linear-gradient(to top, #0003f5, #ffe725);</textarea>
+      <div class="direction-palette">
+          <p>Direction</p>
+          <div class="select-box-palette">
+              <select class="gradient-direction-palette">
+                  <option value="to top">Top</option>
+                  <option value="to right top">Right top</option>
+                  <option value="to right">Right</option>
+                  <option value="to right bottom">Right bottom</option>
+                  <option value="to bottom">Bottom</option>
+                  <option value="to left bottom">Left bottom</option>
+                  <option value="to left">Left</option>
+                  <option value="to left top" selected>Left top</option>
+              </select>
+          </div>
+          <button class="refresh-box">Refresh</button>
+          <button id="copyPalette">Copy</button>
+      </div>
+  </div>
+</div>
+</div>  
+</body>
+
+</html>
