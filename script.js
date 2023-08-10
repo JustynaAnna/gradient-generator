@@ -3,11 +3,20 @@ let hex1 = "";
 let hex2 = "";
 let hex3 = "";
 
+const hexDirection = document.querySelector(".hexDirection");
+const hex1def = document.querySelector(".hex1");
+const hex2def = document.querySelector(".hex2");
+const hex3def = document.querySelector(".hex3");
+const defaultHexDirection = hexDirection.textContent;
+const defaultHex1 = hex1def.textContent;
+const defaultHex2 = hex2def.textContent;
+const defaultHex3 = hex3def.textContent;
 const inputColors = document.querySelectorAll(".colors-input input");
 const container = document.querySelector(".container");
 const copyBtn = document.querySelector("#copy");
 const gradientBox = document.querySelector(".gradient-box");
 const textarea = document.querySelector("textarea");
+const defaultTextarea = textarea.value;
 const selectDirection = document.querySelector(".gradient-direction-palette");
 
 document.querySelector("#generateTwoColors").addEventListener("click", () => {
@@ -66,6 +75,11 @@ function applyDirection() {
 
 document.querySelector(".refresh").addEventListener("click", () => {
   container.style.background = "white";
+  hexDirection.textContent = defaultHexDirection;
+  hex1def.textContent = defaultHex1;
+  hex2def.textContent = defaultHex2;
+  hex3def.textContent = defaultHex3;
+  
 });
 
 const generatePaletteGradient = () => {
@@ -87,6 +101,7 @@ function applyPaletteDirection() {
 
 document.querySelector(".refresh-box").addEventListener("click", () => {
   gradientBox.style.background = "linear-gradient(to top, #0003f5, #ffe725)";
+  textarea.value = defaultTextarea;
   const colorInputs = document.querySelectorAll("input[type='color']");
   colorInputs.forEach(input => {
     input.value = input.defaultValue;
