@@ -11,6 +11,7 @@ const defaultHexDirection = hexDirection.textContent;
 const defaultHex1 = hex1def.textContent;
 const defaultHex2 = hex2def.textContent;
 const defaultHex3 = hex3def.textContent;
+const randomGradientBox = document.querySelector(".random-gradient-box");
 const inputColors = document.querySelectorAll(".colors-input input");
 const container = document.querySelector(".container");
 const copyBtn = document.querySelector("#copy");
@@ -70,16 +71,15 @@ function copyHex() {
 function applyDirection() {
   const selectedDirection = document.querySelector("#gradientDirection").value;
   document.querySelector(".hexDirection").textContent = selectedDirection;
-  container.style.background = `linear-gradient(${selectedDirection}, #${hex1}, #${hex2}${hex3 ? `, #${hex3}` : ''})`;
+  randomGradientBox.style.background = `linear-gradient(${selectedDirection}, #${hex1}, #${hex2}${hex3 ? `, #${hex3}` : ''})`;
 }
 
 document.querySelector(".refresh").addEventListener("click", () => {
-  container.style.background = "white";
+  randomGradientBox.style.background = "white";
   hexDirection.textContent = defaultHexDirection;
   hex1def.textContent = defaultHex1;
   hex2def.textContent = defaultHex2;
-  hex3def.textContent = defaultHex3;
-  
+  hex3def.textContent = defaultHex3;  
 });
 
 const generatePaletteGradient = () => {
@@ -100,7 +100,7 @@ function applyPaletteDirection() {
 }
 
 document.querySelector(".refresh-box").addEventListener("click", () => {
-  gradientBox.style.background = "linear-gradient(to top, #0003f5, #ffe725)";
+  gradientBox.style.background = "linear-gradient(to top, #05a2f6, #ffe725)";
   textarea.value = defaultTextarea;
   const colorInputs = document.querySelectorAll("input[type='color']");
   colorInputs.forEach(input => {

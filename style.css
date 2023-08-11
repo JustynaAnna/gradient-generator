@@ -53,7 +53,7 @@ button,.random-gradient-box, .gradient-box{
   background: #fff;
 }
 .gradient-box{
-  background:linear-gradient(to left top, #0003f5, #ffe725);
+  background:linear-gradient(to top, #05a2f6, #ffe725);
 }
 .refresh, .refresh-box{
 margin-top: 15px;
