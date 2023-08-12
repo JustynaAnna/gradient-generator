@@ -41,7 +41,7 @@ p{
   align-items: center;
   margin-right: 150px;
 }
-button,.random-gradient-box, .gradient-box{
+.custom-btn, .random-gradient-box, .gradient-box{
   margin: 40px 10px 0 10px;
   border-radius: 10px;
   border: 2px solid #dddddd;
@@ -57,9 +57,6 @@ button,.random-gradient-box, .gradient-box{
 }
 .refresh, .refresh-box{
 margin-top: 15px;
-}
-button:hover {
-  transform: scale(1.2);
 }
 .wrapper {
 display: flex;
@@ -100,6 +97,9 @@ input{
   transition: 0.4s ease;
   font-size: 1em;
 }
+.custom-btn:hover {
+  transform: scale(1.2);
+}
 .btn{
   background-image: linear-gradient(216deg, #008ff5 30%, #00d0f5 70%);
   border: none;
@@ -127,9 +127,9 @@ input{
   height: 100%;
 }
 
-.btn:active {
+/* .btn:active {
   top: 3px;
-} 
+}  */
 
 @media screen and (max-width: 600px) {
   .wrapper {
