@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <title>CSS Gradient Generator</title>
@@ -13,10 +14,11 @@
 
   <div class="container">
     <h1>Background: linear-gradient(<span class="hexDirection">to left, </span> #<span class="hex1">000000</span>,
-      <span class="hex2">#000000</span>, <span class="hex3"> #000000</span>);
+      #<span class="hex2">000000</span>, #<span class="hex3">000000</span>);
     </h1>
+    <p>Generate a random gradient</p>
     <div>
-      <button id="generateTwoColors" class="custom-btn btn">Generate 2 colors</button>
+      <button id="generateTwoColors" class="custom-btn btn">Two colors</button>
       <button id="generateThreeColors" class="custom-btn btn">Generate 3 colors</button>
       <button id="copy" class="custom-btn btn">Copy</button>
     </div>
