@@ -19,7 +19,7 @@
     <p>Generate Random Gradient</p>
     <div>
       <button id="generateTwoColors" class="custom-btn btn" type="button">Two colors</button>
-      <button id="generateThreeColors" class="custom-btn btn" type="button">Generate 3 colors</button>
+      <button id="generateThreeColors" class="custom-btn btn" type="button">Three colors</button>
       <button id="copy" class="custom-btn btn" type="button">Copy</button>
     </div>
 
@@ -34,8 +34,8 @@
             <option value="to right bottom">Right bottom</option>
             <option value="to bottom">Bottom</option>
             <option value="to left bottom">Left bottom</option>
-            <option value="to left">Left</option>
-            <option value="to left top" selected>Left top</option>
+            <option value="to left" selected>Left</option>
+            <option value="to left top">Left top</option>
           </select>
         </div>
         <button class="refresh custom-btn btn" type="button">Refresh</button>
@@ -54,20 +54,20 @@
       </div>
 
       <div class="right">
-        <textarea class="gradient-textarea"
-          disabled>background-image: linear-gradient(to top, #0003f5, #ffe725);</textarea>
+        <p class="gradient-text">background-image: linear-gradient(to top, #0003f5, #ffe725);</p>
+        
         <div class="direction-palette">
           <p>Direction</p>
           <div class="select-box-palette">
             <select class="gradient-direction-palette">
-              <option value="to top">Top</option>
+              <option value="to top" selected>Top</option>
               <option value="to right top">Right top</option>
               <option value="to right">Right</option>
               <option value="to right bottom">Right bottom</option>
               <option value="to bottom">Bottom</option>
               <option value="to left bottom">Left bottom</option>
               <option value="to left">Left</option>
-              <option value="to left top" selected>Left top</option>
+              <option value="to left top">Left top</option>
             </select>
           </div>
           <button class="refresh-box custom-btn btn" type="button">Refresh</button>
