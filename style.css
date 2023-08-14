@@ -31,11 +31,12 @@ p{
 }
 .direction {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
 .direction-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,11 +51,10 @@ p{
 .random-gradient-box, .gradient-box{
   width: 350px;
   height: 250px;
-  background: linear-gradient(to top, #2b10fe, #3d8e80 , #a016ff);
+  background:linear-gradient(to top, #05a2f6, #ffe725);
 }
 .gradient-box{
   margin: 0 auto;
-  background:linear-gradient(to top, #05a2f6, #ffe725);
 }
 .refresh, .refresh-box{
 margin-top: 15px;
@@ -122,8 +122,17 @@ input{
   height: 100%;
 }
 
-@media screen and (max-width: 600px) {
-  .wrapper {
+@media screen and (max-width: 400px){
+  .random-gradient-box, .gradient-box{
+    width: 200px;
+    height: 130px;
+    }
+}
+@media screen and (max-width: 675px) {
+  .direction-content{
+    margin: 0 auto;
+  }
+  .wrapper, .random-gradient-box {
     flex-direction: column;
     }
   p{
@@ -139,11 +148,4 @@ input{
   .direction-palette button{
     margin: 10px 0 20px 0;
   }
-}
-@media screen and (max-width: 400px){
-  .gradient-box{
-    width: 200px;
-    height: 130px;
-    background: linear-gradient(to left top, #0003f5, #ffe725);
-    }
 }
