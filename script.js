@@ -3,22 +3,20 @@ let hex1 = "";
 let hex2 = "";
 let hex3 = "";
 
-const hexDirection = document.querySelector(".hexDirection");
-const hex1def = document.querySelector(".hex1");
-const hex2def = document.querySelector(".hex2");
-const hex3def = document.querySelector(".hex3");
-const defaultHexDirection = hexDirection.textContent;
-const defaultHex1 = hex1def.textContent;
-const defaultHex2 = hex2def.textContent;
-const defaultHex3 = hex3def.textContent;
-const randomGradientBox = document.querySelector(".random-gradient-box");
+const hexDir = document.querySelector(".hexDirection");
+const hex1Def = document.querySelector(".hex1");
+const hex2Def = document.querySelector(".hex2");
+const hex3Def = document.querySelector(".hex3");
+const defHexDir = hexDir.textContent;
+const defaultHex1 = hex1Def.textContent;
+const defaultHex2 = hex2Def.textContent;
+const defaultHex3 = hex3Def.textContent;
+const randomGradBox = document.querySelector(".random-gradient-box");
 const inputColors = document.querySelectorAll(".colors-input input");
-const container = document.querySelector(".container");
 const copyBtn = document.querySelector("#copy");
-const gradientBox = document.querySelector(".gradient-box");
-const gradientText = document.querySelector(".gradient-text");
-const defaultText = gradientText.textContent;
-const selectDirection = document.querySelector(".gradient-direction-palette");
+const gradBox = document.querySelector(".gradient-box");
+const gradText = document.querySelector(".gradient-text");
+const defaultText = gradText.textContent;
 
 document.querySelector("#generateTwoColors").addEventListener("click", () => {
   generateRandomHex(2);
@@ -71,22 +69,22 @@ function copyHex() {
 function applyDirection() {
   const selectedDirection = document.querySelector("#gradientDirection").value;
   document.querySelector(".hexDirection").textContent = selectedDirection;
-  randomGradientBox.style.background = `linear-gradient(${selectedDirection}, #${hex1}, #${hex2}${hex3 ? `, #${hex3}` : ''})`;
+  randomGradBox.style.background = `linear-gradient(${selectedDirection}, #${hex1}, #${hex2}${hex3 ? `, #${hex3}` : ''})`;
 }
 
 document.querySelector(".refresh").addEventListener("click", () => {
-  randomGradientBox.style.background = "linear-gradient(to top, #05a2f6, #ffe725)";
-  hexDirection.textContent = defaultHexDirection;
-  hex1def.textContent = defaultHex1;
-  hex2def.textContent = defaultHex2;
-  hex3def.textContent = defaultHex3;  
+  randomGradBox.style.background = "linear-gradient(to top, #05a2f6, #ffe725)";
+  hexDir.textContent = defHexDir;
+  hex1Def.textContent = defaultHex1;
+  hex2Def.textContent = defaultHex2;
+  hex3Def.textContent = defaultHex3;  
 });
 
 const generatePaletteGradient = () => {
   const selectedDirection = document.querySelector(".gradient-direction-palette").value;
   const gradient = `linear-gradient(${selectedDirection}, ${inputColors[0].value}, ${inputColors[1].value})`;
-  gradientBox.style.background = gradient;
-  gradientText.textContent  = `${gradient};`;
+  gradBox.style.background = gradient;
+  gradText.textContent  = `${gradient};`;
 }
 
 inputColors.forEach(input => {
@@ -95,13 +93,13 @@ inputColors.forEach(input => {
 
 function applyPaletteDirection() {
   const selectedPaletteDirection = document.querySelector(".gradient-direction-palette").value;
-  gradientBox.style.background = `linear-gradient(${selectedPaletteDirection}, ${inputColors[0].value}, ${inputColors[1].value})`;
-  gradientText.textContent = `linear-gradient(${selectedPaletteDirection}, ${inputColors[0].value}, ${inputColors[1].value});`;
+  gradBox.style.background = `linear-gradient(${selectedPaletteDirection}, ${inputColors[0].value}, ${inputColors[1].value})`;
+  gradText.textContent = `linear-gradient(${selectedPaletteDirection}, ${inputColors[0].value}, ${inputColors[1].value});`;
 }
 
 document.querySelector(".refresh-box").addEventListener("click", () => {
-  gradientBox.style.background = "linear-gradient(to top, #05a2f6, #ffe725)";
-  gradientText.textContent = defaultText;
+  gradBox.style.background = "linear-gradient(to top, #05a2f6, #ffe725)";
+  gradText.textContent = defaultText;
   const colorInputs = document.querySelectorAll("input[type='color']");
   colorInputs.forEach(input => {
     input.value = input.defaultValue;
