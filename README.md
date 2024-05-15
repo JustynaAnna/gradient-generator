@@ -1,3 +1,5 @@
+demo: https://justynaanna.github.io/gradient-generator/
+
 # gradient-generator
 Gradient Generator is a simple application that allows you to generate CSS code for a gradient background. 
 You can generate a gradient with two or three random colors and customize the gradient direction.
